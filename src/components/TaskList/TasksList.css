@@ -1,0 +1,7 @@
+.TasksList {
+    display: grid;
+    gap:10px;
+    justify-items: center;
+    margin-top: 20px;
+    max-width: 600px;
+}

@@ -1,0 +1,17 @@
+#root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    align-items: center;
+}
+
+.App {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.title {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,7 @@
+.FilterPanel {
+    display: flex;
+}
+
+.FilterPanel label {
+    margin-right: 20px;
+}
