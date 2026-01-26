@@ -41,11 +41,11 @@ El objetivo del proyecto es demostrar manejo de estado, composición de componen
 
 La aplicación está dividida en componentes pequeños y reutilizables:
 
-App
+App \
 ├── CreateNewTask // Crear nuevas tareas \
 ├── FilterPanel // Filtros de estado \
 ├── TasksList // Lista de tareas \
-│ └── TaskItem // Tarea individual \
+│ └── TaskItem // Tarea individual 
 
 
 El estado principal vive en el componente `App` y se pasa a los componentes hijos mediante props.
