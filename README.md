@@ -42,10 +42,10 @@ El objetivo del proyecto es demostrar manejo de estado, composición de componen
 La aplicación está dividida en componentes pequeños y reutilizables:
 
 App
-├── CreateNewTask // Crear nuevas tareas
-├── FilterPanel // Filtros de estado
-├── TasksList // Lista de tareas
-│ └── TaskItem // Tarea individual
+├── CreateNewTask // Crear nuevas tareas \
+├── FilterPanel // Filtros de estado \
+├── TasksList // Lista de tareas \
+│ └── TaskItem // Tarea individual \
 
 
 El estado principal vive en el componente `App` y se pasa a los componentes hijos mediante props.
@@ -74,7 +74,7 @@ Se utiliza un custom hook llamado `useLocalStorage` para abstraer los llamados a
 
 1. Clonar el repositorio
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/ricandres98/to-do-app
 ```
 
 2. Instalar dependencias
@@ -111,6 +111,6 @@ npm run preview
 
 ## 👤 Autor
 
-Ricardo Ojeda
+Ricardo Ojeda \
 Frontend Developer
 
