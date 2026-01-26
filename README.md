@@ -45,7 +45,7 @@ App \
 ├── CreateNewTask // Crear nuevas tareas \
 ├── FilterPanel // Filtros de estado \
 ├── TasksList // Lista de tareas \
-│ └── TaskItem // Tarea individual 
+│  └── TaskItem // Tarea individual 
 
 
 El estado principal vive en el componente `App` y se pasa a los componentes hijos mediante props.
