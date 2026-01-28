@@ -1,16 +1,16 @@
 
-import { TrashCan } from "../../svg/TrashCan";
+import { TrashCan } from "../../svg/TrashCan.tsx";
 import "./TaskItem.css";
 
 const TaskItem = ({ description, status, toggleCompleteTask, deleteTask }) => {
   // const buttonText = status === 'active' ? 'completar' : 'descompletar';
   const statusText = status === 'active' ? 'pendiente' : 'completada';
-  const descriptionClass = status === "completed" ? "description completed" : "description";
+  const taskItemClassName = status === "completed" ? "TaskItem completed" : "TaskItem";
 
   return (
-    <div className="TaskItem">
+    <div className={taskItemClassName}>
       <div className="info">
-        <span className={descriptionClass}>{description}</span>
+        <span className="description">{description}</span>
         <span className="status">{statusText}</span>
       </div>
       <div className="panel">

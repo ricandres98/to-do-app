@@ -4,4 +4,5 @@
 
 .FilterPanel label {
     margin-right: 20px;
+    text-wrap-mode: nowrap;
 }
