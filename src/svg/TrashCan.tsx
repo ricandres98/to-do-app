@@ -1,4 +1,8 @@
-const TrashCan = ({ strokeWidth }) => {
+type Props = {
+    strokeWidth: number;
+}
+
+const TrashCan = ({ strokeWidth }: Props) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

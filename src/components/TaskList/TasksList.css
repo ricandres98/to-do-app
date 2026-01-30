@@ -5,3 +5,19 @@
     margin-top: 20px;
     max-width: 600px;
 }
+
+@media screen and (min-width: 1024px) {
+    .TasksList {
+        max-width: none;
+        /* height: -webkit-fill-available; */
+        /* grid-auto-flow: column; */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        /* grid-template-rows: repeat(auto-fill, minmax(1fr, 200px)); */
+        /* grid-template-columns: repeat(2, minmax(1fr, 200px));
+        grid-template-rows: repeat(5, minmax(min-content, 600px)); */
+
+        /* overflow: hidden; */
+
+        /* SEGUNDO INTENTO */   
+    }
+}

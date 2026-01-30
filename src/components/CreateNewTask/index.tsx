@@ -1,11 +1,16 @@
 import React from "react";
+import type { Task } from "../../types";
 import "./CreateNewTask.css";
 
-const CreateNewTask = ({ createTask }) => {
-  const [inputValue, setInputValue] = React.useState("");
-  const [error, setError] = React.useState(null);
+type Props = {
+  createTask: (description: Task["description"]) => void,
+}
 
-  const onSubmit = (e) => {
+const CreateNewTask = ({ createTask }: Props) => {
+  const [inputValue, setInputValue] = React.useState("");
+  const [error, setError] = React.useState<string | null>(null);
+
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     if (inputValue.trim() === "")
       setError("La descripción no puede estar vacía");

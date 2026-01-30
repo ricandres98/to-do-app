@@ -1,12 +1,11 @@
-// import { useState } from "react";
+import type { Task } from "../types";
 import { useLocalStorage } from "./useLocalStorage";
 
 const useTasks = () => {
-  const { item: tasks, saveItem: setTasks} = useLocalStorage("tasks", []);
-  // const [tasks, setTasks] = useState([]);
+  const { item: tasks, saveItem: setTasks} = useLocalStorage<Task[]>("tasks", []);
 
-  const createTask = (description) => {
-    const newTask = {
+  const createTask = (description: string) => {
+    const newTask: Task = {
       id: Date.now(),
       description: description,
       status: "active",
@@ -16,7 +15,7 @@ const useTasks = () => {
     console.log("Tarea creada:", tasks);
   };
 
-  const toggleCompleteTask = (id) => {
+  const toggleCompleteTask = (id: Task["id"]) => {
     const taskIndex = tasks.findIndex((task) => task.id === id);
     if (taskIndex !== -1) {
       const updatedTasks = [...tasks];
@@ -27,7 +26,7 @@ const useTasks = () => {
     }
   };
 
-  const deleteTask = (id) => {
+  const deleteTask = (id: Task["id"]) => {
     const updatedTasks = tasks.filter((task) => task.id !== id);
     setTasks(updatedTasks);
     console.log("Tarea eliminada:", updatedTasks);
