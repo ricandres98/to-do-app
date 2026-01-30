@@ -1,11 +1,24 @@
-
 import { TrashCan } from "../../svg/TrashCan.tsx";
+import type { Task } from "../../types/index.ts";
 import "./TaskItem.css";
 
-const TaskItem = ({ description, status, toggleCompleteTask, deleteTask }) => {
+type Props = {
+  description: Task["description"],
+  status: Task["status"],
+  toggleCompleteTask: () => void,
+  deleteTask: () => void,
+}
+
+const TaskItem = ({
+  description,
+  status,
+  toggleCompleteTask,
+  deleteTask,
+}: Props) => {
   // const buttonText = status === 'active' ? 'completar' : 'descompletar';
-  const statusText = status === 'active' ? 'pendiente' : 'completada';
-  const taskItemClassName = status === "completed" ? "TaskItem completed" : "TaskItem";
+  const statusText = status === "active" ? "pendiente" : "completada";
+  const taskItemClassName =
+    status === "completed" ? "TaskItem completed" : "TaskItem";
 
   return (
     <div className={taskItemClassName}>
