@@ -1,8 +1,8 @@
 # Task Manager – React Mini App
 
-Mini aplicación de gestión de tareas construida con React como práctica de fundamentos modernos de Frontend Development.
+Mini aplicación de gestión de tareas construida con React y Typescript como práctica de fundamentos modernos de Frontend Development.
 
-El objetivo del proyecto es demostrar manejo de estado, composición de componentes y buenas prácticas en React, más que construir una aplicación compleja.
+El objetivo del proyecto es demostrar manejo de estado, composición de componentes y modelado de datos usando TypeScript para mejorar la seguridad y claridad del código.
 
 ---
 
@@ -28,7 +28,7 @@ El objetivo del proyecto es demostrar manejo de estado, composición de componen
 ## 🛠️ Tecnologías utilizadas
 
 - React
-- JavaScript (ES6+)
+- TypeScript
 - Hooks:
   - `useState`
   - `custom hooks`
@@ -48,7 +48,43 @@ App \
 │  └── TaskItem // Tarea individual 
 
 
-El estado principal vive en el componente `App` y se pasa a los componentes hijos mediante props.
+El estado principal vive en el componente `App` y se pasa a los componentes hijos mediante props tipadas.
+
+---
+
+## 🧠 Modelado del dominio
+
+La aplicación modela explícitamente sus entidades principales usando TypeScript.
+
+### Task
+Cada tarea está representada por un tipo que define claramente su estructura y estado.
+
+Campos principales:
+- `id`
+- `title`
+- `status`
+
+### Filter
+El filtro activo se modela como una unión de valores permitidos, evitando estados inválidos.
+
+Esto permite:
+- Autocompletado
+- Prevención de errores
+- Mejor legibilidad del código
+
+---
+
+## 🧪 Uso de TypeScript
+
+TypeScript se utiliza para:
+
+- Tipar el estado global de la aplicación
+- Tipar props de componentes
+- Tipar funciones de manejo de estado
+- Tipar eventos de formularios
+
+No se utiliza `any`.  
+Todos los tipos están definidos de forma explícita o inferidos correctamente.
 
 ---
 
@@ -97,7 +133,7 @@ npm run preview
 
 ## 📌 Posibles mejoras
 
-- Migrar el proyecto a TypeScript
+- Migrar el proyecto a Next.js
 
 - Agregar autenticación
 
@@ -106,6 +142,8 @@ npm run preview
 - Mejorar el diseño visual
 
 - Tests unitarios
+
+- Escalar el manejo de estado si la app crece
 
 ---
 
