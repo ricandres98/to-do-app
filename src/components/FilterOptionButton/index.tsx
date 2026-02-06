@@ -1,4 +1,4 @@
-import type { filter } from "../../types";
+import type { filter } from "../../types/task";
 import "./FilterOptionButton.css";
 
 type Props = {

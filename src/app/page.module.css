@@ -1,24 +1,17 @@
-#root {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 20px;
-    align-items: center;
-}
-
 .App {
     margin: 0 auto;
     max-width: 600px;
 
     .title-sidebar {
-        padding-left: 20px;
+        margin: 0 auto;
+        max-width: 480px;
+    }
+    
+    .title {
+        margin-bottom: 20px;
     }
 }
 
-.title {
-    margin-bottom: 20px;
-}
 
 @media screen and (min-width: 1024px) {
     #root {
@@ -39,10 +32,12 @@
 
         .title-sidebar {
             position: sticky;
-            height: 100vh;
             top: 0;
             display: grid;
             align-content: center;
+            height: 100vh;
+            max-width: none;
+            padding-left: 20px;
         }
 
         .main-content {
