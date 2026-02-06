@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from 'react';
 import { useTasks } from "@/hooks/useTasks";
 import { CreateNewTask } from "@/components/CreateNewTask"
@@ -22,6 +23,7 @@ export default function Home() {
 
   return (
     <div className={styles.App}>
+      <Link href="/about" className={styles["about-link"]}>About</Link>
       <div className={styles["title-sidebar"]}>
         <div className={styles.title}>
           <h1>GetItDone</h1>

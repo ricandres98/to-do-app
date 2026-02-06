@@ -1,6 +1,7 @@
 :root {
     --background-color: #09001C;
     --gray-purple: #4f4760;
+    --purple-light: #7B5CFF;
     --purple-white: #E4E3E6;
     --bright-color-1: #5100ff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,16 +14,9 @@
 }
 
 body {
-    /* width: 100%; */
-    /* min-height: 100vh; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* padding: 20px 20px; */
-    /* align-items: center; */
     color: var(--purple-white);
     background-color: var(--background-color);
-    /* background-image: linear-gradient(to bottom right, var(--background-color) 60%, #7CED53), linear-gradient(to bottom right, rgba(255,0,0,0.5), yellow); */
-    /* background-image: linear-gradient(to bottom right, rgba(255,0,0,0.5), yellow); */
+    padding: 10px;
 }
 
 @media screen and (min-width: 1024px) {

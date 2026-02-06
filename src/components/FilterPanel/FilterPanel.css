@@ -1,8 +1,16 @@
 .FilterPanel {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .FilterPanel label {
     margin-right: 20px;
     text-wrap-mode: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+    .FilterPanel {
+    flex-wrap: nowrap;
+}
 }
