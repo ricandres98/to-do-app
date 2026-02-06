@@ -1,8 +1,8 @@
-import type { Task } from "../types";
+import type { Task } from "../types/task";
 import { useLocalStorage } from "./useLocalStorage";
 
 const useTasks = () => {
-  const { item: tasks, saveItem: setTasks} = useLocalStorage<Task[]>("tasks", []);
+  const { item: tasks, saveItem: setTasks } = useLocalStorage<Task[]>("tasks", []);
 
   const createTask = (description: string) => {
     const newTask: Task = {
@@ -36,7 +36,7 @@ const useTasks = () => {
     createTask,
     toggleCompleteTask,
     deleteTask,
-    tasks,
+    tasks
   };
 };
 

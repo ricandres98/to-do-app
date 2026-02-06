@@ -1,6 +1,6 @@
-import { TrashCan } from "../../svg/TrashCan.tsx";
-import type { Task } from "../../types/index.ts";
-import "./TaskItem.css";
+import { TrashCan } from "../../svg/TrashCan";
+import type { Task } from "../../types/task.js";
+import styles from "./TaskItem.module.css";
 
 type Props = {
   description: Task["description"],
@@ -18,15 +18,15 @@ const TaskItem = ({
   // const buttonText = status === 'active' ? 'completar' : 'descompletar';
   const statusText = status === "active" ? "pendiente" : "completada";
   const taskItemClassName =
-    status === "completed" ? "TaskItem completed" : "TaskItem";
+    status === "completed" ? `${styles.TaskItem} ${styles.completed}` : styles.TaskItem;
 
   return (
     <div className={taskItemClassName}>
-      <div className="info">
-        <span className="description">{description}</span>
-        <span className="status">{statusText}</span>
+      <div className={styles.info}>
+        <span className={styles.description}>{description}</span>
+        <span className={styles.status}>{statusText}</span>
       </div>
-      <div className="panel">
+      <div className={styles.panel}>
         <input
           type="checkbox"
           name="completed"
@@ -35,7 +35,7 @@ const TaskItem = ({
           onChange={toggleCompleteTask}
         />
         {/* <button className="complete-button" onClick={toggleCompleteTask}>{buttonText}</button> */}
-        <button className="delete-button" onClick={deleteTask} title="Eliminar">
+        <button className={styles["delete-button"]} onClick={deleteTask} title="Eliminar">
           <TrashCan strokeWidth={2} />
         </button>
       </div>

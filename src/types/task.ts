@@ -4,4 +4,3 @@ export interface Task {
   status: "active" | "completed",
 }
 
-export type filter = "all" | Task["status"];
