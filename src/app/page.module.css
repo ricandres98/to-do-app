@@ -1,14 +1,34 @@
 .App {
     margin: 0 auto;
+    padding: 10px;
     max-width: 600px;
 
     .title-sidebar {
         margin: 0 auto;
+        padding-top: 50px;
         max-width: 480px;
     }
     
     .title {
         margin-bottom: 20px;
+    }
+
+    .title h1 {
+        font-size: 50px;
+    }
+
+    .about-link {
+        position: absolute;
+        z-index: 1;
+        left: 10px;
+        top: 10px;
+        color: var(--purple-white);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .about-link:hover {
+        text-decoration: underline;
     }
 }
 

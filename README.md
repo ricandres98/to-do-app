@@ -2,7 +2,12 @@
 
 Mini aplicación de gestión de tareas construida con React y Typescript como práctica de fundamentos modernos de Frontend Development.
 
-El objetivo del proyecto es demostrar manejo de estado, composición de componentes y modelado de datos usando TypeScript para mejorar la seguridad y claridad del código.
+El objetivo del proyecto es demostrar:
+
+- Migración de una aplicación React tradicional a Next.js
+- Uso correcto del App Router
+- Separación entre Server Components y Client Components
+- Manejo de estado, composición de componentes y modelado de datos usando TypeScript para mejorar la seguridad y claridad del código.
 
 ---
 
@@ -27,28 +32,50 @@ El objetivo del proyecto es demostrar manejo de estado, composición de componen
 
 ## 🛠️ Tecnologías utilizadas
 
+- Next.js (App Router)
 - React
 - TypeScript
+- Server Components
+- Client Components
 - Hooks:
   - `useState`
   - `custom hooks`
 - CSS básico (sin librerías externas)
-- Vite
 
 ---
 
 ## 🧩 Estructura de componentes
 
-La aplicación está dividida en componentes pequeños y reutilizables:
+El proyecto utiliza el App Router de Next.js, separando claramente responsabilidades entre servidor y cliente.
 
-App \
-├── CreateNewTask // Crear nuevas tareas \
-├── FilterPanel // Filtros de estado \
-├── TasksList // Lista de tareas \
-│  └── TaskItem // Tarea individual 
+```
+app/
+├── page.tsx                // Client Component (entry point)
+├── layout.tsx              // Layout base
+├── globals.css             // Estilos globales
+├── page.module.css         // Estilos de la página principal
+└── about/
+    ├── page.tsx            // Server Component
+    ├── layout. tsx         // Layout para ruta /about
+    ├── about.module.css
+    ├── layout.module.css
 
+components/ 
+├── CreateNewTask           // Crear nuevas tareas
+├── FilterPanel             // Filtros de estado
+│   └── FilterOptionButton 
+├── TasksList               // Lista de tareas
+│   └── TaskItem            // Tarea individual 
 
-El estado principal vive en el componente `App` y se pasa a los componentes hijos mediante props tipadas.
+types/
+├── task.ts
+├── filter.ts
+
+hooks/
+├── useTasks.ts
+├── useLocalStorage.ts
+```
+
 
 ---
 
@@ -119,27 +146,27 @@ npm install
 ```
 
 
-3. Compilar el proyecto
+3. Ejecutar en desarrollo
 ```bash
-npm run build
+npm run dev
 ```
 
-4. Ejecutar el proyecto
+4. Build de producción
 ```bash
-npm run preview
+npm run build
 ```
 
 ---
 
 ## 📌 Posibles mejoras
 
-- Migrar el proyecto a Next.js
-
 - Agregar autenticación
 
 - Implementar drag & drop
 
 - Mejorar el diseño visual
+
+- Persistencia en base de datos 
 
 - Tests unitarios
 
@@ -151,4 +178,3 @@ npm run preview
 
 Ricardo Ojeda \
 Frontend Developer
-
