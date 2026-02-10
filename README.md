@@ -1,6 +1,6 @@
 # Task Manager – React Mini App
 
-Mini aplicación de gestión de tareas construida con React y Typescript como práctica de fundamentos modernos de Frontend Development.
+Mini aplicación de gestión de tareas construida con **Next.js (App Router)** y **TypeScript** como práctica de fundamentos modernos de Frontend Development.
 
 El objetivo del proyecto es demostrar:
 
@@ -13,7 +13,7 @@ El objetivo del proyecto es demostrar:
 
 ## 🚀 Demo
 
-(LINK pendiente)
+https://to-do-app-ng1g.vercel.app/
 
 ---
 
