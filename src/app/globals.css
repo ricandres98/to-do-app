@@ -16,7 +16,6 @@
 body {
     color: var(--purple-white);
     background-color: var(--background-color);
-    padding: 10px;
 }
 
 @media screen and (min-width: 1024px) {
