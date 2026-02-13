@@ -1,5 +1,4 @@
-import type { filter } from "../../types/filter";
-import "./FilterOptionButton.css";
+import type { filter } from "@/types/filter";
 
 type Props = {
   id: filter,
@@ -24,8 +23,9 @@ const FilterOptionButton = ({
   };
 
   return (
-    <label className="FilterOptionButton">
+    <label className="inline-block p-2 py-1 px-2.5 rounded-md cursor-pointer border border-bright-color-1 text-nowrap lg:flex-nowrap">
       <input
+        className="mr-2.5"
         type="radio"
         name="filter"
         id={id}

@@ -1,9 +1,9 @@
-import "./FilterPanel.css";
-
 const FilterPanel = ({ children }: React.PropsWithChildren) => {
 
   return (
-    <div className="FilterPanel">
+    <div 
+      className="flex flex-wrap gap-2.5 lg:flex-nowrap"
+    >
       {children}
     </div>
   );
