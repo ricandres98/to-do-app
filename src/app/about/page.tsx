@@ -1,11 +1,17 @@
-import styles from "./about.module.css";
-import Link from "next/link";
+import { AbsolutePositionLink } from "@/components/AbsolutePositionLink";
+
 
 export default function AboutPage() {
   return (
-    <main className={styles.aboutPage}>
-      <Link href="/" title="Home">⬅ Home</Link>
-      <h1>About this project</h1>
+    <main
+      className={`
+        w-full text-md text-background-color
+        lg:text-lg`}
+    >
+      <AbsolutePositionLink href="/" title="Home">
+        ⬅ Home
+      </AbsolutePositionLink>
+      <h1 className="text-3xl font-bold mb-2 lg:text-4xl">About this project</h1>
 
       <p>
         Task Manager is a small task management application built as a practical
@@ -13,10 +19,10 @@ export default function AboutPage() {
         and Next.js.
       </p>
 
-      <section>
-        <h2>Project goals</h2>
+      <section className="mt-7">
+        <h2 className="text-2xl font-bold lg:text-3xl mb-2">Project goals</h2>
 
-        <ul>
+        <ul className="list-disc list-inside">
           <li>Practice state management with React</li>
           <li>Model a simple domain using TypeScript</li>
           <li>Use Next.js App Router for routing</li>
@@ -25,10 +31,10 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <section>
-        <h2>Technical decisions</h2>
+      <section className="mt-7">
+        <h2 className="text-2xl font-bold lg:text-3xl mb-2">Technical decisions</h2>
 
-        <ul>
+        <ul className="list-disc list-inside">
           <li>App Router used for file-based routing</li>
           <li>Client Components only where user interaction is required</li>
           <li>Server Component for static content</li>
@@ -38,8 +44,8 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <section>
-        <h2>Author</h2>
+      <section className="mt-7">
+        <h2 className="text-2xl font-bold lg:text-3xl mb-2">Author</h2>
         <p>Ricardo Ojeda – Frontend Developer</p>
       </section>
     </main>

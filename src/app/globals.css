@@ -1,25 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background-color: #09001C;
+    --color-gray-purple: #4f4760;
+    --color-purple-light: #7B5CFF;
+    --color-bright-color-1: #5100ff;
+    --color-purple-white: #E4E3E6;
+    --default-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 :root {
     --background-color: #09001C;
     --gray-purple: #4f4760;
     --purple-light: #7B5CFF;
     --purple-white: #E4E3E6;
     --bright-color-1: #5100ff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    color: var(--purple-white);
-    background-color: var(--background-color);
-}
-
-@media screen and (min-width: 1024px) {
-    #root {
-        padding: 0;
-    }
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }

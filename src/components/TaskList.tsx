@@ -1,9 +1,11 @@
 import type React from "react";
-import styles from "./TasksList.module.css";
 
 const TasksList = ({ children }:React.PropsWithChildren) => {
   return (
-    <div className={styles.TasksList}>
+    <div className={`
+      grid gap-2.5 justify-items-center
+      mt-5 max-w-xl 
+      lg:max-w-none lg:grid-cols-[repeat(auto-fill,minmax(250px,1fr))]`}>
       {/* 
         <TaskItem description="Lavar los platos" status="active" />
         <TaskItem description="Hacer la compra" status="completada" /> 
