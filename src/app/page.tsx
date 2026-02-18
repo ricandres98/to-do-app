@@ -10,8 +10,6 @@ import { FilterOptionButton } from '@/components/FilterOptionButton';
 import { AbsolutePositionLink } from "@/components/AbsolutePositionLink";
 import type { filter } from '@/types/filter';
 
-
-
 export default function Home() {
   const { tasks, createTask, toggleCompleteTask, deleteTask } = useTasks();
   const [filter, setFilter] = useState<filter>('all');
@@ -22,11 +20,14 @@ export default function Home() {
 
   return (
     <div className={`
-      my-0 mx-auto p-2.5 max-w-xl
-      lg:grid lg:grid-cols-[min-content_1fr]
+      my-7 mx-auto p-2.5 max-w-xl
+      lg:grid lg:grid-cols-[min-content_1fr] lg:my-0
       lg:w-full lg:h-dvh lg:max-w-none lg:overflow-hidden
       `}>
-      <AbsolutePositionLink href="/about" title="About">
+      <AbsolutePositionLink 
+        className={`right-2.5! left-auto!`} 
+        href="/about" 
+        title="About">
         About
       </AbsolutePositionLink>
       <div className={`
@@ -67,9 +68,14 @@ export default function Home() {
       </div>
       <main className={`
         lg:h-dvh lg:overflow-y-auto lg:p-5 lg:scroll-smooth`}>
-        <TasksList>
+        <TasksList tasksLength={tasks.length}>
           {tasks.length === 0 ? (
-            <p>No hay tareas ¡Crea una!</p>
+            <p 
+              className={`
+                max-w-fit mx-auto place-self-center
+                text-4xl font-bold`}>
+              No hay tareas ¡Crea una!
+            </p>
           ) : (
             tasks
               .filter((task) =>
