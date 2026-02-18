@@ -1,6 +1,6 @@
 # Task Manager – React Mini App
 
-Mini aplicación de gestión de tareas construida con **Next.js (App Router)** y **TypeScript** como práctica de fundamentos modernos de Frontend Development.
+Mini aplicación de gestión de tareas construida con **Next.js (App Router)**, **TypeScript** y **TailwindCSS** como práctica de fundamentos modernos de Frontend Development.
 
 El objetivo del proyecto es demostrar:
 
@@ -8,6 +8,7 @@ El objetivo del proyecto es demostrar:
 - Uso correcto del App Router
 - Separación entre Server Components y Client Components
 - Manejo de estado, composición de componentes y modelado de datos usando TypeScript para mejorar la seguridad y claridad del código.
+- Implementación de una UI consistente y responsive con TailwindCSS
 
 ---
 
@@ -35,12 +36,28 @@ https://to-do-app-ng1g.vercel.app/
 - Next.js (App Router)
 - React
 - TypeScript
+- TailwindCSS
 - Server Components
 - Client Components
 - Hooks:
   - `useState`
   - `custom hooks`
 - CSS básico (sin librerías externas)
+
+---
+
+## 🎨 Estilos y UI
+
+La interfaz fue migrada de CSS modular a TailwindCSS, buscando:
+
+- Consistencia visual basada en utilidades
+
+- Eliminación de CSS innecesario
+- Mayor velocidad de desarrollo
+- Diseño responsive desde el inicio
+- Mejores estados de interacción (hover, focus)  
+
+Se eliminaron los módulos CSS previos para evitar estilos duplicados y mantener el proyecto más limpio.
 
 ---
 
@@ -52,13 +69,10 @@ El proyecto utiliza el App Router de Next.js, separando claramente responsabilid
 app/
 ├── page.tsx                // Client Component (entry point)
 ├── layout.tsx              // Layout base
-├── globals.css             // Estilos globales
-├── page.module.css         // Estilos de la página principal
+├── globals.css             // Configuración base de Tailwind
 └── about/
     ├── page.tsx            // Server Component
     ├── layout. tsx         // Layout para ruta /about
-    ├── about.module.css
-    ├── layout.module.css
 
 components/ 
 ├── CreateNewTask           // Crear nuevas tareas
