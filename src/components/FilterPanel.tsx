@@ -1,11 +1,11 @@
 const FilterPanel = ({ children }: React.PropsWithChildren) => {
 
   return (
-    <div 
-      className="flex flex-wrap gap-2.5 lg:flex-nowrap"
+    <ul 
+      className="flex flex-wrap gap-2.5"
     >
       {children}
-    </div>
+    </ul>
   );
 };
 

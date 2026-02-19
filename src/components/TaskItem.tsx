@@ -20,63 +20,56 @@ const TaskItem = ({
   //   status === "completed" ? `${styles.TaskItem} ${styles.completed}` : styles.TaskItem;
 
   return (
-    <div
-      className={`
-      flex justify-between
-      max-w-md w-full h-min p-2.5
-      bg-purple-white text-background-color rounded-sm border border-bright-color-1
-      ${status === "completed" && "opacity-80"}
-      lg:min-h-30 lg:max-w-sm
+    <li
+      className={` group
+        flex gap-4 items-center
+        w-full h-min py-4
+        border-gray-300 border-b
+        ${status === "completed" && "opacity-80"}
     `}
     >
-      <div
-        className={`
-        flex flex-col gap-2 justify-between
-        width-full max-w-sm 
-        `}
-      >
-        <span
-          className={`
-            text-xl font-bold text-wrap first-letter:capitalize
-            ${status === "completed" && "line-through text-gray-800"}
-          `}
-        >
-          {description}
-        </span>
-        <span
-          className={`
-            text-sm capitalize
-          `}
-        >
-          {statusText}
-        </span>
-      </div>
-      <div
-        className={`
-          flex gap-3.5 items-center
-        `}
-      >
+      <div className="flex justify-between gap-4">
         <input
           type="checkbox"
           name="completed"
           id="completed"
-          className="size-6 cursor-pointer"
+          className="size-4 mt-1 border-gray-300 cursor-pointer"
           checked={status === "completed"}
           onChange={toggleCompleteTask}
         />
-        {/* <button className="complete-button" onClick={toggleCompleteTask}>{buttonText}</button> */}
-        <button
-          className={`
-            h-6 text-red-800 cursor-pointer 
-            hover:text-red-700 active:text-red-900
-            transition-colors duration-200 ease-in-out`}
-          onClick={deleteTask}
-          title="Eliminar"
-        >
-          <TrashCan strokeWidth={2} />
-        </button>
+        <div className="flex flex-col gap-1">
+          <span
+            className={`
+              text-sm font-bold text-wrap first-letter:capitalize
+              text-gray-900
+              ${status === "completed" && "line-through text-gray-800"}
+              lg:text-base
+            `}
+          >
+            {description}
+          </span>
+          {/* <span
+            className={`
+            text-sm capitalize
+            text-slate-500
+          `}
+          >
+            {statusText}
+          </span> */}
+        </div>
       </div>
-    </div>
+      <button
+        className={`
+            h-4 text-red-800 cursor-pointer 
+            hover:text-red-700 active:text-red-900
+            lg:opacity-0 lg:group-hover:opacity-100
+            transition-colors duration-200 ease-in-out`}
+        onClick={deleteTask}
+        title="Eliminar"
+      >
+        <TrashCan className="size-5" strokeWidth={2} />
+      </button>
+    </li>
   );
 };
 

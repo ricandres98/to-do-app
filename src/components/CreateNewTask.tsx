@@ -23,7 +23,7 @@ const CreateNewTask = ({ createTask }: Props) => {
   return (
     <div className="mb-5">
       <form onSubmit={onSubmit} className="grid">
-        <label htmlFor="new-task-description" className="mb-2.5 text-base">
+        <label htmlFor="new-task-description" className="mb-2.5 text-lg font-bold">
           Crea una nueva tarea:
         </label>
         <div className="flex gap-2 justify-between">
@@ -32,21 +32,23 @@ const CreateNewTask = ({ createTask }: Props) => {
             id="new-task-description"
             placeholder="Ej: Lavar los platos"
             value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
+            onChange={(e) => {setInputValue(e.target.value); setError(null)}}
             className={`
-              h-9 w-full max-w-sm p-1
-              text-lg rounded-md text-slate-800
-              bg-slate-100
-              focus:outline-1 focus:outline-bright-color-1`}
+              h-9 w-full px-3 py-2
+              text-sm rounded-md text-slate-800
+              bg-white border-1  outline-none
+              focus:ring-1  focus:border-none
+              ${error ? "border-red-400 focus:ring-red-400" : "border-gray-200 focus:ring-gray-400"}`}
           />
           <button
             className={`
-              h-9 px-2.5 py-0.5
-              text-base
-              text-purple-white bg-bright-color-1
-              rounded-md cursor-pointer
-              active:scale-98 focus-visible:outline-2 focus-visible:outline-slate-200
-              transition-transform duration-150 ease-in-out`}
+              h-9 px-4 py-2
+              text-sm leading-4
+              text-white bg-gray-900
+              rounded-md cursor-pointer outline-none
+              active:scale-98 
+              hover:bg-gray-800
+              transition duration-150 ease-in-out`}
           >
             Agregar
           </button>
@@ -55,10 +57,10 @@ const CreateNewTask = ({ createTask }: Props) => {
       {error && 
         <p className={`
           inline-block 
-          p-1 mt-1
-          text-sm font-bold 
-          text-amber-500
-          rounded-sm`}>
+          mt-1
+          text-xs font-bold 
+          text-red-500
+          `}>
           {error}
         </p>}
     </div>
