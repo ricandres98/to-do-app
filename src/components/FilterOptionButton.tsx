@@ -17,23 +17,35 @@ const FilterOptionButton = ({
   filter,
   quantity,
 }: Props) => {
+  
   const onChange = () => {
     setFilter(id);
     console.log("Filtro seleccionado:", filter);
   };
 
+  const isSelected = filter === id;
+
   return (
-    <label className="inline-block p-2 py-1 px-2.5 rounded-md cursor-pointer border border-bright-color-1 text-nowrap lg:flex-nowrap">
-      <input
-        className="mr-2.5"
-        type="radio"
-        name="filter"
-        id={id}
-        defaultChecked={defaultValue}
-        onClick={onChange}
-      />
-      {`${text} (${quantity})`}
-    </label>
+    <li>
+      <label 
+        className={`
+          inline-block px-3 py-2
+          text-sm
+          rounded-md cursor-pointer 
+          hover:bg-gray-100
+          ${isSelected ? "bg-gray-200 text-gray-900" : ""}
+          lg:flex-nowrap`}>
+        <input
+          className="mr-2.5"
+          type="radio"
+          name="filter"
+          id={id}
+          defaultChecked={defaultValue}
+          onClick={onChange}
+        />
+        {`${text} (${quantity})`}
+      </label>
+    </li>
   );
 };
 

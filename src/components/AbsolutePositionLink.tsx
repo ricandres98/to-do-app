@@ -21,7 +21,7 @@ const AbsolutePositionLink = ({
       {...linkProps}
       className={`
           absolute left-2.5 top-2.5 z-10 w-fit
-          text-purple-white font-bold text-lg
+          font-bold text-lg
           hover:underline ${linkProps.className}`}
     >
       {children}

@@ -1,8 +1,8 @@
 type Props = {
     strokeWidth: number;
-}
+} & React.SVGProps<SVGSVGElement>;
 
-const TrashCan = ({ strokeWidth }: Props) => {
+const TrashCan = ({ strokeWidth, ...attributes }: Props) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -10,7 +10,7 @@ const TrashCan = ({ strokeWidth }: Props) => {
             viewBox="0 0 24 24"
             strokeWidth={strokeWidth}
             stroke="currentColor"
-            className="size-6"
+            className={attributes.className}
           >
             <path
               strokeLinecap="round"
