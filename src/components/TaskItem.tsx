@@ -25,7 +25,7 @@ const TaskItem = ({
         flex gap-4 items-center
         w-full h-min py-4
         border-gray-300 border-b
-        ${status === "completed" && "opacity-80"}
+        dark:border-slate-800
     `}
     >
       <div className="flex justify-between gap-4">
@@ -41,29 +41,24 @@ const TaskItem = ({
           <span
             className={`
               text-sm font-bold text-wrap first-letter:capitalize
-              text-gray-900
-              ${status === "completed" && "line-through text-gray-800"}
+              text-gray-900 dark:text-slate-100
+              ${status === "completed" && "line-through text-gray-800 dark:text-slate-300"}
               lg:text-base
             `}
           >
             {description}
           </span>
-          {/* <span
-            className={`
-            text-sm capitalize
-            text-slate-500
-          `}
-          >
-            {statusText}
-          </span> */}
         </div>
       </div>
       <button
         className={`
-            h-4 text-red-800 cursor-pointer 
+            p-1 text-red-800 cursor-pointer 
             hover:text-red-700 active:text-red-900
-            lg:opacity-0 lg:group-hover:opacity-100
-            transition-colors duration-200 ease-in-out`}
+            rounded-md
+            lg:opacity-0 lg:group-hover:opacity-100 lg:group-focus-within:opacity-100
+            transition-colors duration-200 ease-in-out
+            dark:text-red-400 dark:hover:text-red-300 dark:active:text-red-500
+            dark:hover:bg-red-500/10 dark:active:bg-red-500/20`}
         onClick={deleteTask}
         title="Eliminar"
       >

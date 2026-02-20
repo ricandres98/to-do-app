@@ -9,7 +9,7 @@ const Hero = ({
     <section className="py-20 text-center space-y-6">
       <h1 className="text-5xl font-bold tracking-tight lg:text-6xl">{title}</h1>
 
-      <p className="max-w-2xl mx-auto text-lg text-slate-600 leading-relaxed">
+      <p className="max-w-2xl mx-auto text-lg text-slate-600 leading-relaxed dark:text-slate-400">
         {description}
       </p>
     </section>
