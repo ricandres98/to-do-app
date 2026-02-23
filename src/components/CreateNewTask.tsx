@@ -25,7 +25,7 @@ const CreateNewTask = ({ createTask }: Props) => {
       <form onSubmit={onSubmit} className="grid">
         <label
           htmlFor="new-task-description"
-          className="mb-2.5 text-lg font-bold"
+          className="hidden mb-2.5 text-lg font-bold lg:block"
         >
           Crea una nueva tarea:
         </label>
@@ -53,7 +53,7 @@ const CreateNewTask = ({ createTask }: Props) => {
           />
           <button
             className={`
-              h-9 px-4 py-2
+              h-9 px-4 lg:py-2
               text-sm leading-4
               text-slate-50 bg-gray-900
               dark:bg-gray-700 dark:hover:bg-gray-600
@@ -62,7 +62,8 @@ const CreateNewTask = ({ createTask }: Props) => {
               hover:bg-gray-950
               transition duration-150 ease-in-out`}
           >
-            Agregar
+            <span className="lg:hidden font-bold text-base">+</span>
+            <span className="hidden lg:inline">Agregar</span>
           </button>
         </div>
       </form>

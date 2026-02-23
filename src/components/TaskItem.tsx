@@ -23,7 +23,7 @@ const TaskItem = ({
     <li
       className={` group
         flex gap-4 items-center
-        w-full h-min py-4
+        w-full h-min py-8 lg:py-4
         border-gray-300 border-b
         dark:border-slate-800
     `}
@@ -45,6 +45,7 @@ const TaskItem = ({
               ${status === "completed" && "line-through text-gray-800 dark:text-slate-300"}
               lg:text-base
             `}
+            onClick={toggleCompleteTask}
           >
             {description}
           </span>

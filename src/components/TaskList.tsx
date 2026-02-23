@@ -8,7 +8,7 @@ type props = {
 const TasksList = ({ children, tasksLength }: props) => {
   return (
     <ul className={`
-      flex flex-col items-center gap-5
+      flex flex-col items-center lg:gap-5
       mt-4
       lg:max-w-none
       ${tasksLength !== 0 ? "lg:grid-cols-[repeat(auto-fill,minmax(250px,1fr))]" : ""}`}>

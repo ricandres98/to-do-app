@@ -34,14 +34,14 @@ export default function Home() {
     >
       <aside
         className={`
-        pt-12 pb-5 mx-auto  px-4 border-b border-gray-200
+        pt-12 pb-5 mx-auto  px-4 lg:border-b border-gray-200
         lg:sticky lg:top-0 lg:grid lg:content-center
         lg:h-dvh lg:w-64 lg:p-5 lg:my-0
         bg-gray-50 lg:border-r lg:border-b-none
           dark:bg-slate-950 dark:border-slate-800
         `}
       >
-        <div className={"mb-10"}>
+        <div className={"mb-4 lg:mb-10"}>
           <h1 className="text-3xl font-semibold tracking-tight">GetItDone</h1>
           <p className="text-base">
             Saca los pendientes de tu mente, anótalos y cúmplelos
@@ -72,7 +72,7 @@ export default function Home() {
           />
         </FilterPanel>
       </aside>
-      <header className="px-4 py-2 border-b border-gray-200 h-min dark:border-slate-800">
+      <header className="px-4 py-2 lg:border-b border-gray-200 h-min dark:border-slate-800">
         <div className="absolute top-4 lg:static lg:flex lg:justify-end">
           <Link
             className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors
