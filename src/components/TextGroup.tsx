@@ -8,7 +8,7 @@ const TextGroup = ({
   return (
     <div>
       <h3 className="font-semibold">{title}</h3>
-      <p className="text-slate-600 mt-2">{description}</p>
+      <p className="text-slate-600 mt-2 dark:text-slate-400">{description}</p>
     </div>
   );
 };

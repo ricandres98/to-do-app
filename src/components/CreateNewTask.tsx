@@ -23,7 +23,10 @@ const CreateNewTask = ({ createTask }: Props) => {
   return (
     <div className="mb-5">
       <form onSubmit={onSubmit} className="grid">
-        <label htmlFor="new-task-description" className="mb-2.5 text-lg font-bold">
+        <label
+          htmlFor="new-task-description"
+          className="hidden mb-2.5 text-lg font-bold lg:block"
+        >
           Crea una nueva tarea:
         </label>
         <div className="flex gap-2 justify-between">
@@ -32,37 +35,50 @@ const CreateNewTask = ({ createTask }: Props) => {
             id="new-task-description"
             placeholder="Ej: Lavar los platos"
             value={inputValue}
-            onChange={(e) => {setInputValue(e.target.value); setError(null)}}
+            onChange={(e) => {
+              setInputValue(e.target.value);
+              setError(null);
+            }}
             className={`
               h-9 w-full px-3 py-2
               text-sm rounded-md text-slate-800
               bg-white border-1  outline-none
               focus:ring-1  focus:border-none
-              ${error ? "border-red-400 focus:ring-red-400" : "border-gray-200 focus:ring-gray-400"}`}
+              dark:bg-slate-100
+              ${
+                error
+                  ? "border-red-400 focus:ring-red-400"
+                  : "border-gray-200 focus:ring-gray-400"
+              }`}
           />
           <button
             className={`
-              h-9 px-4 py-2
+              h-9 px-4 lg:py-2
               text-sm leading-4
-              text-white bg-gray-900
+              text-slate-50 bg-gray-900
+              dark:bg-gray-700 dark:hover:bg-gray-600
               rounded-md cursor-pointer outline-none
               active:scale-98 
-              hover:bg-gray-800
+              hover:bg-gray-950
               transition duration-150 ease-in-out`}
           >
-            Agregar
+            <span className="lg:hidden font-bold text-base">+</span>
+            <span className="hidden lg:inline">Agregar</span>
           </button>
         </div>
       </form>
-      {error && 
-        <p className={`
+      {error && (
+        <p
+          className={`
           inline-block 
           mt-1
           text-xs font-bold 
           text-red-500
-          `}>
+          `}
+        >
           {error}
-        </p>}
+        </p>
+      )}
     </div>
   );
 };

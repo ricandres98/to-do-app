@@ -1,8 +1,6 @@
-import { AbsolutePositionLink } from "@/components/AbsolutePositionLink";
 import { Hero } from "@/components/Hero";
 import { ProjectCard } from "@/components/ProjectCard";
 import { TextGroup } from "@/components/TextGroup";
-import Link from "next/link";
 
 
 export default function AboutPage() {
@@ -87,9 +85,9 @@ export default function AboutPage() {
       </section>
 
       <section className="py-20 text-center">
-        <p className="text-sm uppercase tracking-widest text-slate-500">Built by</p>
+        <p className="text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400">Built by</p>
         <h3 className="text-2xl font-semibold mt-2">Ricardo Ojeda</h3>
-        <p className="text-slate-600 mt-2 text-base">Frontend Developer</p>
+        <p className="text-slate-600 mt-2 text-base dark:text-slate-300">Frontend Developer</p>
       </section>
     </main>
   );

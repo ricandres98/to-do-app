@@ -27,16 +27,25 @@ const FilterOptionButton = ({
 
   return (
     <li>
-      <label 
+      <label
         className={`
           inline-block px-3 py-2
-          text-sm
+          text-xs lg:text-sm
           rounded-md cursor-pointer 
-          hover:bg-gray-100
-          ${isSelected ? "bg-gray-200 text-gray-900" : ""}
-          lg:flex-nowrap`}>
+          lg:flex-nowrap
+          ${
+            isSelected
+              ? `bg-gray-200  text-gray-900
+               hover:bg-gray-200  hover:text-gray-900
+               dark:bg-gray-700 dark:text-slate-50 
+               dark:hover:bg-gray-700 dark:hover:text-slate-50
+               `
+              : "hover:bg-gray-100 dark:hover:bg-gray-900"
+          }
+          dark:text-slate-50 transition-colors duration-150 ease-in-out`}
+      >
         <input
-          className="mr-2.5"
+          className="hidden mr-2.5 lg:inline"
           type="radio"
           name="filter"
           id={id}
