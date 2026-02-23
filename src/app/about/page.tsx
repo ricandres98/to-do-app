@@ -1,8 +1,6 @@
-import { AbsolutePositionLink } from "@/components/AbsolutePositionLink";
 import { Hero } from "@/components/Hero";
 import { ProjectCard } from "@/components/ProjectCard";
 import { TextGroup } from "@/components/TextGroup";
-import Link from "next/link";
 
 
 export default function AboutPage() {

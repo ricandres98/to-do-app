@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+    --breakpoint-xs: 30rem;
     --color-background-color: #09001C;
     --color-gray-purple: #4f4760;
     --color-purple-light: #7B5CFF;
     --color-bright-color-1: #5100ff;
     --color-purple-white: #E4E3E6;
     --default-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --gradient-attention-horizontal: 90deg,#f1ac0c,#b478ff 49.5%,#3c50df;
 }
 
 :root {
