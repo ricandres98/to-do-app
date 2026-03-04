@@ -15,7 +15,6 @@ const TaskItem = ({
   deleteTask,
 }: Props) => {
   // const buttonText = status === 'active' ? 'completar' : 'descompletar';
-  const statusText = status === "active" ? "pendiente" : "completada";
   // const taskItemClassName =
   //   status === "completed" ? `${styles.TaskItem} ${styles.completed}` : styles.TaskItem;
 
@@ -41,7 +40,7 @@ const TaskItem = ({
           <span
             className={`
               text-sm font-bold text-wrap first-letter:capitalize
-              text-gray-900 dark:text-slate-100
+              text-gray-900 dark:text-slate-100 cursor-default
               ${status === "completed" && "line-through text-gray-800 dark:text-slate-300"}
               lg:text-base
             `}
