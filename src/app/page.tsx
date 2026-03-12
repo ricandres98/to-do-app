@@ -111,6 +111,15 @@ export default function Home() {
               .filter((task) =>
                 filter === "all" ? true : task.status === filter,
               )
+              .sort((a, b) => {
+                if (a.status === "active" && b.status === "completed") {
+                  return -1;
+                } else if (a.status === "completed" && b.status === "active") {
+                  return 1;
+                } else {
+                  return 0;
+                }
+              })
               .map((task) => (
                 <TaskItem
                   description={task.description}
